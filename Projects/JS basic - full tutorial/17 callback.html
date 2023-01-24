@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button1">click me</button>
+    <button id="button2">click me2</button>
+
+    <script>
+      function ok(num) {
+        console.log("liczba dodatnia lub = 0, num:", num);
+      }
+
+      function err(num) {
+        console.log("liczba ujemna, bład,  num:", num);
+      }
+
+      function diff(num) {
+        console.log("liczba = jest rowna num:", num);
+      }
+
+      function testPositiveNum(n, resolve, diffrent, error) {
+        if (n > 0) {
+          resolve(n);
+        }
+        if (n <= 0) {
+          diffrent(n);
+        } else {
+          error(n);
+        }
+      }
+
+      testPositiveNum(111, ok, err, diff);
+      testPositiveNum(-5, ok, err, diff);
+      testPositiveNum(0, ok, err, diff);
+
+      // podpiecie funkcji callback pod click
+
+      function bclicked(event) {
+        console.log("przycisk klikniety");
+      }
+
+      document.getElementById("button1").addEventListener("click", bclicked);
+
+      document.getElementById("button2").addEventListener("click", function(){
+            console.log("button2 clicked");
+      });
+    </script>
+  </body>
+</html>

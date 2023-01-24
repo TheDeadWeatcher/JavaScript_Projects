@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // tablice - uporzadkowana kolekcja elementów
+      // nie są typem, a obiektem
+      // mogą przechowywać dowolne typy: proste i złożone
+      // elementy uporzadkowane sa w postaci indeksów, kazdy indeks
+      // to liczba całkowita, liczone sa od 0
+
+      let a = []; // pusta tablica
+      let b = [22, "tekst", { a: 1 }, [5, 4, 3], function () {}, null];
+      console.log(b);
+      console.log(b[6]); // undefined
+      console.log(b[b.length - 1]); // ostatni element to null
+      console.log(b[0]); // pierwszyelement to 22
+
+      b[2] = 99;
+      console.log(b);
+
+      let c = new Array(12, "tekst", 9);
+      console.log(c); // [12, "tekst", 9]
+
+      let d = Array(1, 2, 3);
+      console.log(d); // [1,2,3]
+
+      let e = [];
+      e[0] = "tekst1";
+      e[1] = "tekst2";
+      e[2] = "tekst3";
+      e[e.length] = "tekst4";
+      e.push("test5");
+      console.log(e);
+
+      let f = [0, 1, 2, 3, 4, 5, 6, 7];
+      console.log(f);
+      f.length = 4; // obcinasz elementy z tablicy
+      console.log(f); // [0,1,2,3,]
+
+      delete f[1];
+      console.log(f); // [0, empty,2,3]
+      console.log(f[1]); // undefined
+
+      console.log(1 in f); // false, poeniwaz indeks nie istnieje
+      console.log(2 in f); // true, istnieje indeks w tablicy
+
+      let g = Array(5).fill(7);
+      console.log(g);
+
+      // iteroac - przechodzic miedzy tablicami
+      let h = [99, 56, 45, "txt"];
+
+      for (let i = 0; i < h.length; i++) {
+        console.log( h[i] );
+      }
+
+
+      let arr1 = ["el1", "el2", "el3"];
+      arr1.forEach(function(item, index, array){
+        console.log(item, index,);
+      }); 
+
+      let arr2 = arr1.concat( [1,2,3] );
+      console.log(arr2);
+
+    let arr3 = arr1.concat ( [5,6], [12,11,12] )
+    console.log(arr3);
+
+      let strFromArr = arr1.join();
+      console.log(strFromArr);
+      let strFromArr2 = arr1.join("|");
+      console.log(strFromArr2);
+
+      let arr4 = [1,2,3,4];
+      arr4.reverse();
+      console.log(arr4);
+
+      arr4.push(99);
+      console.log(arr4);
+
+      let arrEl = arr4.pop();
+      console.log(arrEl);
+      console.log(arr4);
+
+    </script>
+  </body>
+</html>

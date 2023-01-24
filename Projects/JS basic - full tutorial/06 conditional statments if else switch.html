@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = 5;
+      if (data > 5) {
+        console.log("data wieksze od 5");
+      }
+
+      if (data < 5) {
+        console.log("data mniejsza od 5");
+      }
+
+      if (data == 5) {
+        console.log("data jets rowna 5");
+      }
+
+      let age = 1;
+      if (age >= 18) {
+        console.log("moze glosowac");
+      }
+      if (age < 18) {
+        console.log("nie moze glosowac");
+        console.log("musi poczkeac do 18 urodzin");
+      }
+      age = 10;
+      if (age >= 18) {
+        console.log("moze");
+      } else {
+        console.log("nie moze");
+      }
+
+      let sportRanking = 5;
+      if (sportRanking == 1) {
+        console.log("1 miejsce");
+      } else if (sportRanking == 2) {
+        console.log("2miejsce");
+      } else if (sportRanking == 3) {
+        console.log("3 miesjce");
+      } else {
+        console.log("pozostrale miesjce");
+      }
+
+      //console.log("dalsza czesc");
+
+      const x = 120;
+      const y = 99;
+      if (x > y) {
+        console.log("x wieksz  y");
+      } else {
+        console.log("x<y");
+      }
+
+      let topSpeed = 4000;
+      switch (topSpeed) {
+        case 100:
+          console.log("mala predkosc maksymalna");
+          break;
+        case 150:
+          console.log("predkosc 150km/h");
+          break;
+        case 200:
+          console.log("szybko 2000");
+          break;
+        case 250:
+          console.log("baaaaardzo szybko 250");
+          break;
+        case 300:
+          console.log("b.szybko 3000km/h");
+          break;
+        case 310:
+        case 330:
+        case 400:
+          console.log("predkosc powyzej 300km/h");
+          break;
+          
+          default: 
+          console.log("brak info");
+      }
+    </script>
+  </body>
+</html>

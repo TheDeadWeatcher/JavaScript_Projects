@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+
+
+      body {
+        display: flex;
+        justify-content: center;
+        height: 100vw;
+        width: 100vw;
+        background: greenyellow ; 
+        overflow: hidden;
+
+
+
+      }
+
+      .container {
+        text-align: center;
+
+      }
+      
+      #content-preload {
+         display: none;
+       /* height: 30vw; */
+
+      }
+
+      #content {
+        height: 40vw;
+        margin-top: 20px;
+
+      }
+
+      #text {
+          font: 1.4rem bold Verdana, Sans-serif;
+
+      }
+      
+      
+    </style>
+
+  </head>
+  <body>
+
+       <div class="container">
+        <img src="" id="content-preload">
+        <img src="" id="content">
+        <div id="text">Test</div>
+       </div>
+
+    <script>
+
+      const randomMeme = {
+          contentPreload: document.getElementById("content-preload"),
+          content: document.getElementById("content"),
+          text: document.getElementById("text"), 
+
+        init: function (){
+          console.log("app started");
+          
+          this.getContent();
+        }, 
+
+        getContent: async function (){
+
+          const apiUrl = "https://some-random-api.ml/meme";
+          const response = await fetch (apiUrl);
+          const data = await response.json();
+
+          this.showMeme(data);
+
+        }, 
+
+        showMeme: function (data){
+
+          const imgSrc = data.image;
+          const caption = data.caption; 
+
+          this.content.src = imgSrc;
+          this.text.innerHTML = caption;
+
+        },
+
+
+      };
+
+
+      randomMeme.init();
+
+
+    </script>
+  </body>
+</html>

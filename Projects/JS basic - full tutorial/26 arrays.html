@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let a = []; // pusta tablica 
+        let b = [22, "txt", {a:1}, [5,4,3], function(){}, null];
+        console.log(b);
+        console.log(b[6]); // undefined 
+        console.log(b[b.length-1]); // ostatni element czyli null 
+        console.log( b[0]); // 0 czyli odwolanie sie do 1 obiektu 
+
+        b[2] = 99; 
+        console.log(b);
+
+        let c = new Array (12, "txt", 9); 
+        console.log(c);
+
+        let d = Array(1,2,3);
+        console.log(d);
+
+        let e = [];
+        e[0] = "test1";
+        e[3] = "test2";
+        e[7] = "test3";
+        e[e.length] = "test4";
+        e.push("test5");
+        console.log(e);
+
+        let f = [0,1,2,3,4,5,6,7,8,9];
+        console.log(f);
+        f.length = 4; // obcinamy ilosc elementów w tablicy 
+        console.log(f);
+
+        delete f[1]; // skasawoac index pierwszy tablicy f 
+        console.log(f);
+        console.log(f[1]);// po skasowaniu juz nie mozna sie odwolac / undefined
+
+        console.log ( 1 in f );  // false , indeks nei istnieje 
+        console.log ( 2 in f );  // true 
+
+        let g = Array(5).fill(7); // tworzy atuomatycznie tablice z wypelnieniem 7 
+        console.log(g);
+
+
+        let h = [132,1312,5254, "txt"];
+
+        for(let i = 0; i < h.length; i++){
+            console.log(h[i]);
+        }
+
+        let arr1 = ["el1", "el2", "el3", 231];
+        arr1.forEach(function(item, index, array){
+            console.log(item, index);
+        });
+
+        arr2 = arr1.concat([1,2,3]); // laczenie tablic 
+        console.log(arr2);
+
+        let arr3 = arr1.concat([5,6], [10,11,12]);
+        console.log(arr3);
+
+        let strrFromArr = arr1.join();
+        console.log(strrFromArr); 
+        let strrFromArr2 = arr1.join("|"); // odziela lementy w lancuchu znaków 
+        console.log(strrFromArr2);
+
+        let arr4 = [1,2,3,4,5]; // reverse odwraca elmenty w sensie kolejnosc 
+        arr4.reverse();
+        console.log(arr4);
+
+        arr4.push(99); // dodaje lement do tablicy na koniec ( push)
+        console.log(arr4);
+
+
+        let arrEl = arr4.pop();// pop pobiera i kasuje ostatni elment z tablicy 
+        console.log(arrEl);
+        console.log(arr4);
+
+
+    </script>
+</body>
+</html>

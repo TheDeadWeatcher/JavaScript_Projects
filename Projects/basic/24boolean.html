@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // boolean - wartosci logiczne : true lub false (slowa kluczowe )
+
+      let flag = true;
+      if (flag == true) {
+        console.log("prawda");
+      }
+
+      if (flag == false) {
+        console.log("nie prwad"); // nie wykona sie bo flag ma false
+      }
+      flag = false;
+
+      if (flag) console.log("skrotow i prwada");
+      if (!flag) console.log("skrotow i fałsz");
+
+      console.log(true);
+      console.log(!true);
+
+      if (4>1){
+        console.log("4>1");
+      }
+
+      //falsy value - " falszywe wartosci"
+
+      let data = ""; 
+      if ( data){ // data bedzie zmieniona na boolean - nazwyamy to konwersja 
+        console.log("prawda");
+      }
+
+
+      /*
+      let data2 = "tekst"; 
+      if ( data2){ // data bedzie zmieniona na boolean - nazwyamy to konwersja 
+        console.log("prawda");
+      }
+
+      */ 
+
+      // false values zawsze konwertowane na false 
+      // " " pusty string 
+      //0, -0 
+      // 0n BigInt
+      // Nan
+      // null
+      // undefind
+      // false 
+
+
+
+      let data3 = null;
+      if ( data3) {
+        console.log("data 3 ma wartosc true");
+      } else {
+        console.log("data 3 ma wartośc false");
+      }
+
+      // truthy value
+
+      // te wartosci konwertuja na true 
+
+      // "tekst"
+      // liczby inne niz 0 
+      //[],[3, 4, 5, ]
+      //{}, {a:1}, widnow 
+      // function tes(){}
+
+       let test = " tekst"; 
+       if(test) console.log("prawda", test);
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

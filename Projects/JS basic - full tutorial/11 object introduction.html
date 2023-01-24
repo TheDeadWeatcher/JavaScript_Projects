@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let car1 = {
+            brand : "Chevrolet",
+            model : "Camaro",
+            year : 1967,
+        };
+
+        console.log(car1);
+        console.log(car1.brand);
+        console.log(car1.model);
+        console.log(car1.year);
+
+
+        let rocket = {
+            brand : "spaceX",
+            model : "falcon",
+            topSpeed : 30000,
+
+            printInfo: function () {
+                console.log(this.brand, this.model, this.topSpeed); // spaceX falcon 30000
+            },
+
+            printTopspeed: function (){
+                console.log("max speed:", this.topSpeed);
+
+            }
+        };
+
+
+        rocket.printInfo();
+        rocket.printTopspeed();
+
+
+
+
+
+    </script>
+</body>
+</html>

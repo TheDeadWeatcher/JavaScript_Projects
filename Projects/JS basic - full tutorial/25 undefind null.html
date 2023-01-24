@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a; // zmienna zadeklarowana
+      console.log(a); // undefind, nie ma wartosci w zmiennej
+      if (a == undefined) console.log("brak wartosci");
+
+      /*
+
+        b; 
+        błąd 
+        referrence error : b is not defind 
+
+        */
+
+      console.log(typeof b); //undefind
+
+      // null
+
+      let test = 5;
+      console.log(test); // 5
+      test = null;
+      console.log(test); // null
+      console.log(typeof null); // object
+
+      if (null) console.log("nie wykona sie bo null zamienione na false  ");
+      if (undefined) console.log("nie wykona sie bedzie fasle ");
+
+      if (null == undefined) console.log("true");
+      if (null === undefined) console.log("false"); // nie wykona sie poruwnanie scilse porownujemy typ jak i warosc
+    </script>
+  </body>
+</html>

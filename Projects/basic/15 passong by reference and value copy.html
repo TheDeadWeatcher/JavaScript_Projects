@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = 10;
+      let info = data;
+      console.log(data, info);
+      data = 33;
+      console.log(data, info);
+
+      let obj = {
+        a: 10,
+      };
+
+      let test = obj;
+
+      console.log(obj.a, test.a);
+      obj.a = 33;
+
+      console.log(obj.a, test.a);
+
+      function something(a, b) {
+        a = 33;
+        return a + b;
+      }
+      let someA = 23;
+      let someB = 40;
+      console.log(something(someA, someB));
+
+      console.log(someA, someB);
+
+      let objA = {
+        a: 15,
+      };
+
+      let objB = {
+        b: 60,
+      };
+
+      function foo(obj1, obj2) {
+        objA.a = 30;
+        return objA.a + objB.b;
+      }
+
+      console.log(foo(objA, objB));
+
+      console.log(objA.a, objB.b);
+
+      let arrTest = [];
+      let arr = [1, 2, 3, 5,6];
+    
+
+      
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [12, 20, 13];
+
+      delete arr[1];
+        
+      for (const v of arr) console.log(v);
+
+      for (const k in arr) console.log(k);
+
+      const str = "text";
+      for ( const s of str) console.log(s);
+      for ( const i in str) console.log(i);
+
+      const obj = {
+        a:10,
+        txt:"text",
+        print: function(){}
+      };
+
+      for (const key in obj) console.log(key);
+      console.log(obj.propertyIsEnumerable("txt"));
+
+      
+    </script>
+  </body>
+</html>

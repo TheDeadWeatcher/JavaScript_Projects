@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "module" src="test-module.js"></script>
+    <script type="module">
+
+        // import całości 
+
+        import*as myModule from "./test-module.js";
+        console.log(myModule);
+        console.log(myModule.testValue); // "test"
+        console.log(myModule.getData()); // 123
+        console.log(myModule.value); // undefined
+
+
+        // 2 druga metoda import konkretnych funkcji elementów + add (aliasy )
+
+        import {getData, testValue, add as addition} from "./test-module.js";
+        console.log(getData()); // 123
+        console.log(testValue);// test
+        console.log(addition(10,2));// 12
+
+        import myDefult from "./test-module.js";
+        console.log(myDefult); // obiekt z defualt export  {value: ' Jebac psy', getData: ƒ}
+
+        import defaultExport, {multiply, testValue as testData} from "./test-module.js";
+        console.log(multiply(10,3)); // 30 
+        console.log(testData); // test 
+        // testValue = "testChange"; //   Uncaught TypeError: Assignment to constant variable.
+
+        myModule.setTestValue("test change"); // "test chane"
+        console.log(testData); // test change 
+        console.log(testValue);// test change 
+
+
+        
+    </script>
+</body>
+</html>

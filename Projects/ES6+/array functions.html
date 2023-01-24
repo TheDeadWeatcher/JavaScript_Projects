@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,12,123,12,31231];
+        arr.forEach(x => {
+            let r = x * 2;
+            console.log(r);
+        });
+
+        const arr2 = arr.map(x => x*3);
+        console.log(arr2); // [3, 36, 369, 36, 93693]
+
+        const arr3 = arr2.filter ( x => x > 10); // filtruej wszystkie lementy wieksze od 10 z tablicy 
+        console.log(arr3);//  [36, 369, 36, 93693]
+
+        const result = arr.reduce((acc, cur) => acc + cur);
+        console.log(result); // suma liczb 31379 
+
+        const found = arr.find( el => el > 100);
+        console.log(found); // 123 
+
+        const numbers = [1,2,3,4,5,67,7];
+        const info = numbers.every( el => el >= 1 );
+        console.log(info);// true wszystkie liczby sa wieksze lub rowne 1 
+
+        const atLeastOne = numbers.some( el => el > 7);
+        console.log(atLeastOne); // true - jedna wartosc jest wieksza od 7 
+    </script>
+</body>
+</html>

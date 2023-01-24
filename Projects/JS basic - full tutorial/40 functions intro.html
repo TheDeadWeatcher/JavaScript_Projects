@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const addNums = function (a,b,c,d){
+            return a+b*c/d;
+        }
+
+        console.log(addNums(3,4,7,5));
+        console.log(addNums(3,100,7,12));
+        console.log(addNums(3,100,888123,155));
+
+        console.log(typeof addNums);
+        console.log(addNums.name);
+        console.log(addNums.length);
+        console.log(addNums);
+
+        addNums.sometching = "test";
+        console.dir(addNums);     // dir dostanie sie do funkcji    
+        console.log(addNums.toString());        
+
+        // scope - zakres zmiennych w funkcji 
+      
+        function testScope (arg1){
+            "use strict"
+            // localTest = 99; // bład tak nie mozna robic bez let
+            let LocalVariable = 10; 
+            console.log(arg1, LocalVariable);
+
+        }
+
+        testScope(1);
+
+        function testFunction1(){
+            const data = 10; 
+            const result1 =  test2(18);
+            console.log("result1:", result1);
+
+            function test2 (arg) {
+                let data = 11; 
+                return arg + data; 
+            }
+
+           const result2 =  test2(18);
+           console.log("result2:", result2);
+        }
+
+        testFunction1();
+
+
+
+        let testF = function (){
+            console.log("test func expr!");
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a; // zmienna jest zadeklarowana
+        console.log(a); // undefind 
+        if (a == undefined) console.log("brak wartości");
+
+        /*
+        b;
+        bład: 
+        b is not definded // bład js w praktyce jest niezadeklarowana a nie zindetyfikowana
+        */ 
+
+        console.log(typeof b); // undiefined
+
+        //null - intecjonalne wsazanie zmienna nie ma wartosci 
+
+        let test = 5; 
+        console.log(test);
+
+        test = null;
+        console.log(test);// null        
+        console.log(typeof null);// object
+        
+        // null i undefined to false values
+
+        if(null) console.log("nie wykona sie bo null zamienione na false");
+        if(undefined) console.log("nie wykona sie bo undefined zamienione na false");
+        //porownianie proste
+        if (null == undefined) console.log("wykonma sie bo true");
+        //porownianie scisle 
+        if (null === undefined) console.log("nie wykona sie");
+
+
+    </script>
+</body>
+</html>

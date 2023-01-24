@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    window.addEventListener("load", function(){
+        console.log("load event");
+
+        let div = document.getElementById("content");
+        console.log(div);
+        div.innerHTML = "<b>Hello World!</b>";
+    });        
+
+    </script>
+
+
+    <div id="content"></div>
+    <script>
+
+        let div = document.getElementById("content");
+        console.log(div);
+        div.innerHTML = "<b>Hello World!</b>";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test1 (v){
+            if (typeof v === "undefined") v = 23;
+            console.log(v);
+        }
+
+        test1();
+
+        function test2(a, b = 44, c = {test:"txt"}) {
+        console.log(a,b,c);
+        }
+        test2(10);
+        test2(888, 123, {test:"tst"});
+
+        function test3 ([a = 12,b = 123123] = []){
+            console.log(a,b);
+        }
+        test3(); // 12 123123
+        test3([]);// 12 123123
+        test3([10, 1023]); // 10, 1023
+
+        function test4 ([a = 12,b = 1] = [500, 1000]){
+            console.log(a,b);
+        }
+
+        test4(); // 500 1000 
+
+        function test5 ([a = 12,b = 1] = [500]){
+            console.log(a,b);
+        }
+        
+        test5(); // 500 1 
+
+
+        function test6({b = 2 ,  a = 1, } = {}){
+            console.log(a,b);
+
+        }
+
+        test6({a: 10, b:20, c:30}); // 10 20 
+        test6({a: 10}); //10 2 
+        test6(); // 1 2 
+    </script>
+</body>
+</html>

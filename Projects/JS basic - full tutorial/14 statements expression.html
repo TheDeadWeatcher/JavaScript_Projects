@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = {
+        name: "an",
+        surname: null,
+        addres: {
+          postalCode: null,
+          city: null,
+          country: null,
+        },
+        proffesion: null,
+      };
+
+      function updateAddress(obj, postalCode, city, country) {
+        user.addres.postalCode = postalCode;
+        user.addres.city = city;
+        user.addres.country = country;
+      }
+
+      function updateSurname(obj, surname) {
+        user.surname = surname;
+      }
+
+      function updateProffesion(obj, proffesion){
+        user.proffesion = proffesion;
+      }
+
+      updateProffesion (user, "graphic design");
+      updateSurname(user, "jasykaa");
+      updateAddress(user, "001", "WAWA", "PL");
+      console.log(user);
+
+
+    </script>
+  </body>
+</html>

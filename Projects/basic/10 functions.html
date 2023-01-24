@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function add(a, b){
+            let c = a + b;  
+            console.log("wynik:", c);
+
+        }
+
+        add(8,3);
+        add(20, 15);
+        add(20, 841234213);
+
+       let x = 5;
+       let y = 100; 
+        if ( x > 4){
+            add(x,y); 
+
+        }
+        
+        function multiply (a, b) {
+            return a * b; 
+
+        }
+
+        let result = multiply (15, 4);
+        console.log("result:", result);
+
+        let division = function (a, b ) {
+            return a / b; 
+        }
+
+        let divisionResult = division (100, 8); 
+            console.log ("wynik dzielenia:", divisionResult);
+
+
+        let data = 55; // zmienna globalna, dostepna w całym naszym programie js
+        let text = "JavaScript";
+        function test () {
+            let text = "hello"; 
+            console.log("wartośc data:", data);
+            console.log ("wartośc text:", text); 
+        }
+
+        test();
+        console.log (text);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(this);
+      console.log(this === globalThis);
+
+      function foo() {
+        console.log("foo this:", this);
+      }
+
+      foo();
+
+      function bar() {
+        "use strict";
+        console.log("bar this:", this);
+      }
+
+      bar();
+
+      let obj = {
+        bar: function () {
+          "use strict";
+          console.log("bar this:", this);
+        },
+      };
+
+      obj.bar();
+
+      let car = {
+        name: "mustang",
+        year: 1970,
+        brand: "Ford",
+
+        print: function (arg) {
+          console.log(this.name, this.year, this.brand, arg);
+        },
+      };
+
+      let citroen = { name: "xara", year: 1999, brand: "Citroen" };
+      car.print.call(citroen, "picasso");
+
+      console.log(car);
+
+      let bmw = { name: "M3", year: 2020, brand: "BMW" };
+      car.print.call(bmw, "M POWER");
+
+
+      
+
+    </script>
+  </body>
+</html>

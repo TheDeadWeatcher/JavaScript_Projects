@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const [num, name, obj] =  [12,"Ania",{b:6}];
+       console.log(num); 
+       console.log(name); 
+       console.log(obj); 
+
+      const {username, age, city= "KRK"} = {username : " Ola", age: 30};
+      console.log(username);
+      console.log(age);
+      console.log(city);
+
+
+    const [a, b, c, d = 10 ] = [1,2,3];
+    console.log(d);
+
+    const [f, ,h] = [9,11,23];
+    console.log(f);
+    console.log(h);
+
+
+    function getUserData (){
+        const userCity = "wawa"
+        const street = "wilcza"
+        return {
+            userCity,
+            street
+            
+        }
+    }
+
+    const userData1 = getUserData();
+    console.log(userData1);
+
+    const {userCity, street} = getUserData ();
+    console.log(userCity,street); 
+
+    const userDetails = {
+        name:"Karol",
+        age: 30, 
+        city: "Krk"
+    }
+
+
+    function printUser({city, name}){
+        console.log(city,name);
+
+    }
+
+    printUser(userDetails);
+
+
+    const employee = {
+        name: "Ola",
+        id: 54,
+        employment: {
+            company: "example.com",
+            adress: {
+                country: "Poland"
+                
+            }
+        }
+    };
+
+    const  {id, employment:{company}} = employee;
+    console.log(id, company);
+    
+    const {employment: {adress: {country}}} = employee;
+    console.log(country);
+
+    const {employment: {adress:{street: companyStreet = "Al. Ujazdowskie wilcza"}}} = employee;
+    console.log(companyStreet);
+
+    
+    </script>
+</body>
+</html>

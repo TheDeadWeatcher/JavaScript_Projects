@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String - ciag znakow UTF -16 
+
+        const s1 = "teskt";
+        const s2 = 'teskt';
+
+
+        const num = 78; 
+        // literały szablonu
+        const s3 = `
+            string w wielu liniach 
+            liniach ${num}
+            wyrazneia js: ${1+2+3}
+        
+        `;
+
+        console.log(s3);
+        console.log("tekst".length);
+        console.log("".length);
+        console.log("tekst"[2]) ;
+        console.log(s3 [ s3.length -1 ]) ;
+
+        console.log(s3.charCodeAt(15));
+        
+        // wyszukiwanie slowa
+        let simpleText = "blalblablal a nie blebleble";
+        let pos = simpleText.indexOf("nie");
+        console.log(pos);
+
+        pos = simpleText.lastIndexOf("a");
+        console.log(pos);
+
+        pos = simpleText.lastIndexOf("a", 6);
+        console.log(pos);
+
+        pos = simpleText.lastIndexOf("a", 8);
+
+    console.log(pos);
+
+    // metoda trim() - wycina białe znaki ( spacje itp.)
+    console.log("     teksty cos tam   ".trim() );
+
+    // toUppercase ()
+    console.log("nie".toLocaleUpperCase());
+    // to LowerCase()
+
+    console.log("nie".toLocaleLowerCase());
+
+
+
+        // łacznie łancuchów znakow 
+
+        const str1 ="do";
+        const resultStr = "text" + str1;
+        console.log(resultStr); "blblblb"
+
+
+        let str2 = "test".concat("other text");
+        console.log(str2);
+
+        //Pobieranie fragmetnów ze stringa 
+        let str5= "0123456789";
+        console.log( str5.slice(2));
+        
+        console.log(str5.slice(4, 8 )); 
+        console.log(str5.slice(4, 9 ));
+        console.log(str5.slice(-3 ));
+        console.log(str5.slice(-6, -2 ));
+
+
+        console.log(str5.substr(0));
+        console.log(str5.substr(5, 3));
+        console.log(str5.substr(-7,2 ));
+
+        // split() dzieli stringi ze wzgfledu na przekazany znak
+
+        let str6 = "a1 b2 c3 d4 e5";
+        let dataStr6 = str6.split(" ");
+        console.log(dataStr6);
+
+        //replace() zamienia słowa w stringu 
+
+        let str7 = "nie";
+        let str8 = str7.replace("nie", "tak");
+        console.log(str8);
+
+        let str9 ="tekst";
+        str9[0] = "A"; 
+        console.log(str9); 
+        let str10 = str9.replace("k", "A");
+        console.log(str10);
+
+
+        let arr = ["T", "E", "b"]; 
+        arr[0] = "B";
+        console.log(arr);
+
+         
+
+
+
+
+        
+        
+        
+        
+        
+
+
+
+
+
+    
+
+
+
+
+    </script>
+</body>
+</html>

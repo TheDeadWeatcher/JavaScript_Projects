@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cars = ["jeep", "fiat"];
+      cars.unshift("bmw", "VW"); // unshift dodaje lementy do poczatku tablicy
+      console.log(cars);
+
+      let car = cars.shift();
+      console.log(car);
+
+      let arr5 = ["Ola", "Ani", "Rafał", "Karol"];
+      arr5.splice(2, 0, "Bartek"); // splice dodaje do tablicy obiekt 2 - nr indexu 0 czy kasujemy, na koniec dodajemy
+      console.log(arr5);
+
+      let arr6 = ["Ola", "Ani", "Rafał", "Karol"];
+      arr6.splice(2, 1, "Michał");
+      console.log(arr6);
+
+      arr6.splice(1, 2, "Gucio", "Ewka", "Paulina "); // kasujemy 2 obiekty z od 1 indexu i dodajemy reszte imino
+      console.log(arr6);
+
+      let indexEwka = arr6.indexOf("Ewka");
+      console.log(indexEwka);
+
+      arr6.unshift("ewka");
+      console.log(arr6);
+      let indexEwka2 = arr6.lastIndexOf("Ewka");
+      console.log(indexEwka2);
+      let indexEwka3 = arr6.lastIndexOf("Ewka", 2);
+      console.log(indexEwka3);
+
+      let sortedArr = arr6.sort();
+      console.log(sortedArr);
+      let reversed = arr6.sort().reverse();
+      console.log(reversed);
+
+      let arr7 = [44, 55, 11, 99, 12312];
+
+      let sortedArr7 = arr7.sort();
+      console.log(sortedArr7); // sortowanie alfabetyczne
+
+      function sortNumbers(a, b) {
+        //return 0 jesli sa rownie a i b
+        //nastepnie zawracamy wartosc wieksza od zera jeslia a >b
+        // wasrtosc mniejsza od zera jesli a < b
+        // a = 5 b = 7
+        // return a- b = 5-7 = -2
+        return a - b;
+      }
+
+      let sortedArr7ok = arr7.sort(sortNumbers);
+      console.log(sortedArr7ok); // sortowanie wedlug kolejnosci liczb
+
+      let arr8 = sortedArr7ok.map(function (value, index, arr) {
+        return value * 2;
+      });
+
+      console.log(arr8);
+
+      let arr9 = sortedArr7ok.filter(function (value) {
+        return value > 100;
+      });
+
+      console.log(arr9); // zwraca elemnty wieksze od 100 w tym przypadku 12312
+
+      let sum = arr8.reduce(function (accumulator, currentValue, index) {
+        return accumulator + currentValue;
+      });
+
+      console.log(sum); // suma wszystkich elementów z arr8
+
+      let result = [1,2,3,4].every(function(value, index, arr){
+        return value > 0; 
+      }); 
+
+
+      console.log(result);
+
+      result = [-1,2,3,4].every(function(value, index, arr){
+        return value > 0; 
+      }); 
+
+
+      console.log(result);
+
+      const objects = [{id:0}, {id:1}, {id:2}, {id:3, name:"Ania"}];
+
+      let obj = objects.find(function(o){
+        return o.id == 3;
+      });
+
+      console.log(obj);
+
+      let objIndex = objects.findIndex(function(o){
+        return o.id == 10;
+      }); 
+
+      console.log(objIndex);
+
+      const fruits = ["jablko", "malina", "cytryna"];
+      console.log(fruits.includes("malina"));
+      console.log(fruits.includes("pomarancza"));
+
+
+
+    </script>
+  </body>
+</html>
